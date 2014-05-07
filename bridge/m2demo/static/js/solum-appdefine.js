@@ -215,7 +215,7 @@
 
             planfile_hidden_html = document.getElementById("planfile_hidden");
             planfile_hidden_html.value = "name: ghost\ndescription: ghost blogging platform\nartifacts:\n" +
-                "    name: ghost\n    artifact_type: application.heroku\n    content:\n" +
+                "  - name: ghost\n    artifact_type: application.heroku\n    content:\n" +
                 "        href: https://github.com/paulczar/solum-example-app-ghost.git\n" +
                 "    language_pack: auto\n";
 
@@ -242,7 +242,7 @@
 
             var plan_header = "camp_version: CAMP 1.1\n";
             var artifacts_header = "artifacts:\n";
-            var artifact_template = "    artifact_type: application.heroku\n" +
+            var artifact_template = "  - artifact_type: application.heroku\n" +
                 "    content:\n        href: ARTIFACT_URL\n    instances: NUM_INSTANCES\n" +
                 "    requirements:\n        requirement_type: org.solum:BuildUsing\n" +
                 "        fulfillment: id:langpack-auto\n\n";

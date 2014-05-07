@@ -231,7 +231,7 @@
         function solum_create_plan() {
 // TODO: See if we can make this real later; solum doesn't understand the complete plan below yet
             return "name: ghost\ndescription: ghost blogging platform\nartifacts:\n" +
-                "    name: ghost\n    artifact_type: application.heroku\n    content:\n" +
+                "  - name: ghost\n    artifact_type: application.heroku\n    content:\n" +
                 "        href: https://github.com/paulczar/solum-example-app-ghost.git\n" +
                 "    language_pack: auto\n"
 
@@ -248,7 +248,7 @@
             var artifacts_header = "artifacts:\n";
             // Fill in ARTIFACT_URL with git repo url, NUM_INSTANCES with the number of
             // apps to run.
-            var artifact_template = "    artifact_type: application.heroku\n" +
+            var artifact_template = " - artifact_type: application.heroku\n" +
                 "    content:\n        href: ARTIFACT_URL\n    instances: NUM_INSTANCES\n" +
                 "    requirements:\n        requirement_type: org.solum:BuildUsing\n" +
                 "        fulfillment: id:langpack-auto\n\n";
